@@ -35,6 +35,6 @@ cin>>xinterp;
         term *= (xinterp - x[i]);
         result += f[0][i+1] * term;
     }
-cout<<result;
+cout<<"the xinterpolation result is:  "<<result;
     return 0;
 }
