@@ -9,7 +9,7 @@ cout<<"Enter the x values:  ";
     for (int i = 0; i< n; i++) {
 cin>>x[i];
     }
-cout<<"Enter the corresponding y values:  ";
+cout<<"Enter the  y values:  ";
     for (int i = 0; i< n; i++) {
 cin>>y[i];
     }
