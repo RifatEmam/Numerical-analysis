@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// Function to calculate factorial
+
 int fact(int n) {
     int factorial = 1;
     for (int i = 2; i <= n; i++) {
@@ -10,7 +10,7 @@ int fact(int n) {
     return factorial;
 }
 
-// Function for Newton's Forward Interpolation
+
 float newtonForwardInterpolation(float x[], float y[][20], int n, float value) {
     float sum = y[0][0];
     float u = (value - x[0]) / (x[1] - x[0]);
@@ -23,7 +23,7 @@ float newtonForwardInterpolation(float x[], float y[][20], int n, float value) {
     return sum;
 }
 
-// Function for Newton's Backward Interpolation
+
 float newtonBackwardInterpolation(float x[], float y[][20], int n, float value) {
     float sum = y[n - 1][0];
     float u = (value - x[n - 1]) / (x[1] - x[0]);
@@ -51,7 +51,7 @@ int main() {
         cin >> y[i][0];
     }
 
-    // Constructing the forward difference table
+  
     for (i = 1; i < n; i++) {
         for (j = 0; j < n - i; j++) {
             y[j][i] = y[j + 1][i - 1] - y[j][i - 1];
@@ -67,7 +67,7 @@ int main() {
         cout << endl;
     }
 
-    // Constructing the backward difference table
+  
     for (i = 1; i < n; i++) {
         for (j = n - 1; j > i - 1; j--) {
             y[j][i] = y[j][i - 1] - y[j - 1][i - 1];
@@ -83,12 +83,12 @@ int main() {
         cout << endl;
     }
 
-    // Interpolation input
+   
     float value;
     cout << "\nEnter the value to interpolate: ";
     cin >> value;
 
-    // Calculate interpolation using both methods
+   
     float forwardResult = newtonForwardInterpolation(x, y, n, value);
     float backwardResult = newtonBackwardInterpolation(x, y, n, value);
 
@@ -97,4 +97,6 @@ int main() {
 
     return 0;
 }
+
+
 
